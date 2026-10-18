@@ -1,0 +1,91 @@
+{
+ "prompt_sha": "a7b5b1565bf16e2cd393",
+ "agent": "pricing_optimization",
+ "provider": "openai",
+ "model": "gpt-4o",
+ "usage": {
+  "input_tokens": 3520,
+  "output_tokens": 570,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0
+ },
+ "draft": {
+  "summary": "Inventory for 2026-08-27 and 2026-08-28 is limited, driven by a large group block, and pricing increases are blocked due to insufficient available inventory. Elsewhere, daily rates are in line with market trends, but opportunities exist to adjust pricing for future dates where occupancy and comp-set pricing warrant it. Regular checks are essential to ensure BAR aligns with transient demand, as some data signals cannot be fully verified.",
+  "identified_opportunities": [
+   {
+    "date": "2026-08-27",
+    "priority": "High",
+    "why": "Only 8 rooms remain. BAR increase blocked and inappropriate as demand is group-driven; better inventory management needed."
+   },
+   {
+    "date": "2026-08-28",
+    "priority": "High",
+    "why": "Only 6 rooms remain. BAR increase blocked and inappropriate as demand is group-driven; better inventory management needed."
+   },
+   {
+    "date": "2026-08-29",
+    "priority": "Medium",
+    "why": "Competitive rate positioning could be further optimized to close the rate gap with comp-set."
+   }
+  ],
+  "recommended_actions": [
+   {
+    "action_type": "review_pricing_position",
+    "new_bar_inr": null,
+    "target_date": "2026-08-29",
+    "action": "Review pricing position for 29 August to close rate gap with comp-set.",
+    "urgency": "Medium",
+    "rationale": "Current BAR is 3.2% below comp-set average with 51 rooms remaining, indicating room to adjust pricing to remain competitive.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11088|2026-08-29"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.6"
+     }
+    ]
+   },
+   {
+    "action_type": "review_pricing_position",
+    "new_bar_inr": null,
+    "target_date": null,
+    "action": "Check OTA channel mix impact due to unverified data and a large group presence.",
+    "urgency": "Low",
+    "rationale": "OTA mix data verification is uncertain, and a large group booking skews transient demand signals.",
+    "evidence_refs": [
+     {
+      "source": "data_quality_report",
+      "ref": "DQ-012"
+     },
+     {
+      "source": "data_quality_report",
+      "ref": "DQ-014"
+     }
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11088|2026-08-27",
+    "detail": "Only 8 rooms remaining despite a large group block."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11088|2026-08-28",
+    "detail": "Only 6 rooms remaining amid a large contracted group event."
+   },
+   {
+    "source": "data_quality_report",
+    "ref": "DQ-027",
+    "detail": "Pickup for 2026-08-28 overlaps with group block ZT-OFF-26, distorting transient data."
+   }
+  ],
+  "confidence": 0.8,
+  "data_gaps": [
+   "OTA mix and forecast reliability are noted but currently unverifiable, which complicates transient demand assessment."
+  ]
+ }
+}

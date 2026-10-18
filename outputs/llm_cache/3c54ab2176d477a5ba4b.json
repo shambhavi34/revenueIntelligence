@@ -1,0 +1,128 @@
+{
+ "prompt_sha": "3c54ab2176d477a5ba4b",
+ "agent": "channel_inventory_restriction",
+ "provider": "openai",
+ "model": "gpt-4o",
+ "usage": {
+  "input_tokens": 3983,
+  "output_tokens": 836,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0
+ },
+ "draft": {
+  "summary": "Given the upcoming 'TechCon Hyderabad' event, high demand is confirmed for 30th August with compression across the market, making it urgent to close discounted rate plans to maximize revenue. For 29th August, though no high demand flag is set, it's advisable to close some discounts as booking accelerates. There's also a notable low BAR positioning continuously on some dates raising visibility concerns and necessitating a review of our channel mix due to reliance on OTAs.",
+  "identified_opportunities": [
+   {
+    "date": "2026-08-30",
+    "priority": "High",
+    "why": "Compression confirmed on 2026-08-30 due to 'TechCon Hyderabad' event, with fewer than 10 rooms remaining."
+   },
+   {
+    "date": "2026-08-29",
+    "priority": "Medium",
+    "why": "'TechCon Hyderabad' event ongoing, with pickup accelerating, despite no confirmed high demand."
+   }
+  ],
+  "recommended_actions": [
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "ADV21-CP",
+    "target_date": "2026-08-30",
+    "action": "Close ADV21-CP for 2026-08-30",
+    "urgency": "High",
+    "rationale": "High demand confirmed due to 'TechCon Hyderabad' event, with remaining transient inventory below 10 rooms (\u00a74.4).",
+    "evidence_refs": [
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.4"
+     },
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11103|2026-08-30"
+     }
+    ]
+   },
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "OTA-PROMO",
+    "target_date": "2026-08-30",
+    "action": "Close OTA-PROMO for 2026-08-30",
+    "urgency": "High",
+    "rationale": "Compression and high demand during 'TechCon Hyderabad' warrants reducing discounts.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11103|2026-08-30"
+     }
+    ]
+   },
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "ADV21-CP",
+    "target_date": "2026-08-29",
+    "action": "Close ADV21-CP for 2026-08-29",
+    "urgency": "Medium",
+    "rationale": "Although no high demand flag, ongoing event indicates potential demand surge.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11103|2026-08-29"
+     }
+    ]
+   },
+   {
+    "action_type": "review_channel_mix",
+    "min_los": null,
+    "rate_plan": null,
+    "target_date": null,
+    "action": "Review channel mix for visibility risk.",
+    "urgency": "Low",
+    "rationale": "PMS channel mix data is unreliable on 6 of 10 dates (DQ-011), and OTA reliance is over 60% making visibility review necessary (\u00a74.5).",
+    "evidence_refs": [
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.5"
+     },
+     {
+      "source": "data_quality_report",
+      "ref": "DQ-011"
+     }
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11103|2026-08-30",
+    "detail": "High demand flagged and compression confirmed for this date due to 'TechCon Hyderabad'."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11103|2026-08-29",
+    "detail": "TechCon Hyderabad ongoing; accelerating demand despite no confirmed high demand flag."
+   },
+   {
+    "source": "business_rules_and_sops.md",
+    "ref": "\u00a74.4",
+    "detail": "Do not recommend a BAR increase when remaining saleable transient inventory is below 10 rooms unless a compression event is confirmed."
+   },
+   {
+    "source": "business_rules_and_sops.md",
+    "ref": "\u00a74.5",
+    "detail": "Do not recommend closing the lowest rate plan when channel_mix_ota_pct exceeds 60% without flagging visibility risk."
+   },
+   {
+    "source": "data_quality_report",
+    "ref": "DQ-011",
+    "detail": "channel_mix_ota_pct could not be reproduced on 6 of 10 dates; treat as unverified."
+   }
+  ],
+  "confidence": 0.9,
+  "data_gaps": [
+   "Uncertainty in OTA channel mix data affecting decision-making."
+  ]
+ }
+}

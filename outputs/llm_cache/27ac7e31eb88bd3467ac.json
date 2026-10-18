@@ -1,0 +1,112 @@
+{
+ "prompt_sha": "27ac7e31eb88bd3467ac",
+ "agent": "channel_inventory_restriction",
+ "provider": "openai",
+ "model": "gpt-4o",
+ "usage": {
+  "input_tokens": 3994,
+  "output_tokens": 746,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0
+ },
+ "draft": {
+  "summary": "Current pricing at The Amber Court is consistently below the comp set, with BAR dropping up to 21% lower on key dates. The OTA channel contributes significantly to occupancy, occasionally reaching critical levels impacting visibility. Immediate actions should focus on balancing OTA reliance with direct bookings and addressing low ADR bookings. Careful management of rates through closing certain low-yield plans and setting minimum LOS can strengthen revenue, especially with available inventory before high-demand periods.",
+  "identified_opportunities": [
+   {
+    "date": "2026-08-27",
+    "priority": "High",
+    "why": "High OTA mix (67%), and the BAR is consistently below the comp set. Closing OTA-PROMO can improve ADR."
+   },
+   {
+    "date": "2026-08-28",
+    "priority": "High",
+    "why": "OTA occupancy is 68%, and BAR is 11% below the comp set. Adjusting OTA plans improves revenue potential."
+   },
+   {
+    "date": "2026-09-03",
+    "priority": "Medium",
+    "why": "With OTA occupancy at 67% and a lower comparative BAR, strategic closure of low-yield OTA-PROMO can help drive direct bookings."
+   }
+  ],
+  "recommended_actions": [
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "OTA-PROMO",
+    "target_date": "2026-08-27",
+    "action": "Close the OTA-PROMO plan to improve ADR and reduce low-yielding OTA bookings.",
+    "urgency": "High",
+    "rationale": "OTA-PROMO plan holds a low ADR (5433) and high OTA percentage (67%), affecting overall revenue.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11157|2026-08-27"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.5"
+     }
+    ]
+   },
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "OTA-PROMO",
+    "target_date": "2026-08-28",
+    "action": "Close the OTA-PROMO plan to optimize revenue and encourage direct bookings.",
+    "urgency": "High",
+    "rationale": "High OTA dependence (68%) with BAR notably below comp set (11%), closing low ADR plans helps boost margins.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11157|2026-08-28"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.5"
+     }
+    ]
+   },
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "OTA-PROMO",
+    "target_date": "2026-09-03",
+    "action": "Close the OTA-PROMO rate plan on high OTA percentage days.",
+    "urgency": "Medium",
+    "rationale": "OTA involvement at 67% with a competitive BAR gap suggests the need to reduce dependency on OTA for better ADR.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11157|2026-09-03"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.5"
+     }
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11157|2026-08-27",
+    "detail": "Date has a 67% OTA occupancy rate with low BAR against the competition."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11157|2026-08-28",
+    "detail": "Date shows a BAR 11% below comp set and a high OTA occupancy contribution (68%)."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11157|2026-09-03",
+    "detail": "The date's BAR is lower relative to competition with high OTA occupancy (67%)."
+   }
+  ],
+  "confidence": 0.8,
+  "data_gaps": [
+   "There is inconsistent forecasting data that challenges occupancy and pricing predictions."
+  ]
+ }
+}

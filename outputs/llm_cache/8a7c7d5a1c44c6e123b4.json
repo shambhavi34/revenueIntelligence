@@ -1,0 +1,96 @@
+{
+ "prompt_sha": "8a7c7d5a1c44c6e123b4",
+ "agent": "pricing_optimization",
+ "provider": "openai",
+ "model": "gpt-4o",
+ "usage": {
+  "input_tokens": 3288,
+  "output_tokens": 581,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0
+ },
+ "draft": {
+  "summary": "Several dates in the forecast horizon show low room availability with high occupancy percentages, limiting rate increase recommendations. Current BAR positioning is generally competitive, with some dates slightly below comp-set average. Forecast reliability is low, with warnings on forecast accuracy and OTA channel mix data. An opportunity exists to evaluate our pricing strategy for dates with low room availability to ensure optimal revenue capture.",
+  "identified_opportunities": [
+   {
+    "date": "2026-08-25",
+    "priority": "Medium",
+    "why": "Opportunity to increase BAR due to competitive pricing below comp-set average."
+   },
+   {
+    "date": "2026-08-28",
+    "priority": "Medium",
+    "why": "Room remaining is 12, and BAR is below comp-set average; need to ensure optimal pricing strategy."
+   },
+   {
+    "date": "2026-08-31",
+    "priority": "Medium",
+    "why": "Increase BAR due to competitive pricing and remaining rooms above 10 threshold."
+   }
+  ],
+  "recommended_actions": [
+   {
+    "action_type": "review_pricing_position",
+    "new_bar_inr": null,
+    "target_date": "2026-08-28",
+    "action": "Review pricing strategy as comp-set is higher and rooms are available.",
+    "urgency": "Medium",
+    "rationale": "With 12 rooms remaining and a BAR below the comp-set average (-1.8% gap), a review of pricing strategy can maximize revenue.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11042|2026-08-28"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.2"
+     }
+    ]
+   },
+   {
+    "action_type": "increase_bar",
+    "new_bar_inr": 6440,
+    "target_date": "2026-08-31",
+    "action": "Increase BAR to maximize revenue.",
+    "urgency": "Medium",
+    "rationale": "Remaining inventory of 11 rooms with a competitive pricing gap (4.7%).",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11042|2026-08-31"
+     },
+     {
+      "source": "business_rules_and_sops.md",
+      "ref": "\u00a74.1"
+     }
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11042|2026-08-25",
+    "detail": "BAR is 2.0% above comp-set average, with 14 rooms remaining."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11042|2026-08-28",
+    "detail": "BAR is 1.8% below comp-set average, with 12 rooms remaining and low pickup."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11042|2026-08-31",
+    "detail": "BAR is 4.7% above comp-set average, with sufficient rooms remaining."
+   },
+   {
+    "source": "data_quality_report",
+    "ref": "DQ-006",
+    "detail": "forecast_rooms is unreliable, affecting demand assessments."
+   }
+  ],
+  "confidence": 0.85,
+  "data_gaps": [
+   "Unreliable forecast_rooms data may affect demand predictions and pricing decisions."
+  ]
+ }
+}

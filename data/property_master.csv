@@ -1,0 +1,5 @@
+hotel_id,hotel_name,brand,city,rooms,pms_property_code,kepsla_property_slug,guestara_workspace_id,ar_hotel_id,owner_id,gm_name,remote_reception,sla_tier,live_date
+ACM-BLR-IND-01,Acme Downtown,Acme,Bengaluru,48,1042,acme-indiranagar-blr,gst_88213,AR11042,OWN-2201,Priya Nair,No,Tier 1,2024-03-11
+NOV-BLR-WFD-02,Nova Hotels Whitefield,Nova Hotels,Bengaluru,92,1088,nova-whitefield-blr,gst_88431,AR11088,OWN-2214,Arjun Menon,Partial,Tier 1,2025-01-20
+ACM-HYD-GCB-03,Acme Westside,Acme,Hyderabad,64,1103,acme-gachibowli-hyd,gst_88562,AR11103,OWN-2230,Sneha Reddy,Yes,Tier 2,2025-06-02
+PRT-PNQ-AMB-04,The Amber Court,Partner Hotels,Pune,36,1157,,gst_88790,AR11157,OWN-2248,Vikram Joshi,Yes,Tier 3,2026-04-15

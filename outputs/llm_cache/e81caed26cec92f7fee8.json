@@ -1,0 +1,123 @@
+{
+ "prompt_sha": "e81caed26cec92f7fee8",
+ "agent": "channel_inventory_restriction",
+ "provider": "openai",
+ "model": "gpt-4o",
+ "usage": {
+  "input_tokens": 4249,
+  "output_tokens": 658,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0
+ },
+ "draft": {
+  "summary": "High-demand days with remaining inventories below 10 rooms are causing issues in managing rates. The 40-room group block from Zenith Tech is impacting availability inaccurately counted as transient demand. Days with significant OTA promotions alongside low-ADR transient bookings suggest a need to review channel mix or consider plan closures. System data inconsistencies indicate caution in decision-making.",
+  "identified_opportunities": [
+   {
+    "date": "2026-08-27",
+    "priority": "High",
+    "why": "High demand with <10 rooms left, and non-transient driven pickup."
+   },
+   {
+    "date": "2026-08-28",
+    "priority": "Medium",
+    "why": "Ongoing group block-related demand, incorrect sold figures."
+   },
+   {
+    "date": "2026-08-29",
+    "priority": "Low",
+    "why": "High share of low-ADR bookings and OTA promotions."
+   }
+  ],
+  "recommended_actions": [
+   {
+    "action_type": "review_channel_mix",
+    "min_los": null,
+    "rate_plan": null,
+    "target_date": null,
+    "action": "Review OTA channel mix to evaluate rate plan exposure.",
+    "urgency": "High",
+    "rationale": "Higher than advisable OTA mix is affecting ADR and profitability.",
+    "evidence_refs": [
+     {
+      "source": "data_quality_report",
+      "ref": "DQ-012"
+     },
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11088|2026-08-27"
+     }
+    ]
+   },
+   {
+    "action_type": "close_rate_plan",
+    "min_los": null,
+    "rate_plan": "OTA-PROMO",
+    "target_date": "2026-08-27",
+    "action": "Close OTA-PROMO rate plan for transient bookings on 2026-08-27.",
+    "urgency": "Medium",
+    "rationale": "Mitigate low-ADR influence on forthcoming high-demand date.",
+    "evidence_refs": [
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11088|2026-08-27"
+     },
+     {
+      "source": "bookings.csv",
+      "ref": "BK-101018"
+     }
+    ]
+   },
+   {
+    "action_type": "review_channel_mix",
+    "min_los": null,
+    "rate_plan": null,
+    "target_date": null,
+    "action": "Investigate OTA channel impact on low-ADR bookings throughout the horizon.",
+    "urgency": "Medium",
+    "rationale": "Persistent low-ADR on key dates suggests channel mix issues.",
+    "evidence_refs": [
+     {
+      "source": "data_quality_report",
+      "ref": "DQ-012"
+     },
+     {
+      "source": "rate_pace.csv",
+      "ref": "AR11088|2026-08-28"
+     }
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11088|2026-08-27",
+    "detail": "High demand day with <10 rooms remaining and group block issues."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11088|2026-08-28",
+    "detail": "Group block Zenith Tech causing artificial demand impression."
+   },
+   {
+    "source": "rate_pace.csv",
+    "ref": "AR11088|2026-08-29",
+    "detail": "High proportion of low-ADR bookings with OTA promotions."
+   },
+   {
+    "source": "data_quality_report",
+    "ref": "DQ-012",
+    "detail": "Unverified OTA mix data affecting strategy."
+   },
+   {
+    "source": "bookings.csv",
+    "ref": "BK-101018",
+    "detail": "Example of low-ADR booking affecting revenue."
+   }
+  ],
+  "confidence": 0.8,
+  "data_gaps": [
+   "Unverified OTA mix percentages throughout the horizon.",
+   "Inaccurate room sold figures may mislead pickup analysis."
+  ]
+ }
+}

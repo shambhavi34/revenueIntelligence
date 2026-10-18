@@ -1,0 +1,41 @@
+ar_hotel_id,stay_date,bar_inr,comp_set_avg_inr,rooms_available,rooms_sold,occupancy_pct,pickup_last_7d,forecast_rooms,restrictions,group_block_rooms,group_rate_inr,channel_mix_ota_pct,event_flag,notes
+AR11042,2026-08-25,5200,5100,48,34,70.8,1,30,,0,0,49,none,
+AR11088,2026-08-25,6400,6200,92,66,71.7,-3,61,,0,0,36,none,
+AR11103,2026-08-25,4600,4700,64,44,68.8,5,42,,0,0,56,none,
+AR11157,2026-08-25,3400,3900,36,23,63.9,2,23,,0,0,56,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-26,5200,5350,48,42,87.5,5,38,,0,0,50,none,
+AR11088,2026-08-26,6400,6050,92,60,65.2,7,57,,0,0,50,none,
+AR11103,2026-08-26,4600,4700,64,47,73.4,-3,44,,0,0,52,none,
+AR11157,2026-08-26,3200,4050,36,19,52.8,5,19,,0,0,60,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-27,5600,5100,48,41,85.4,-3,40,,0,0,32,none,
+AR11088,2026-08-27,6000,6200,92,84,91.3,3,82,,40,4400,49,none,
+AR11103,2026-08-27,4400,4700,64,44,68.8,-3,44,,0,0,54,none,
+AR11157,2026-08-27,3600,3900,36,24,66.7,1,22,,0,0,67,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-28,5400,5500,48,36,75.0,-1,32,,0,0,43,none,
+AR11088,2026-08-28,6200,6150,92,86,93.5,32,62,MinLOS2 on OTA,40,4400,34,none,Group block ZT-OFF-26 (Zenith Tech offsite) contracted 12-Aug: 40 rooms at negotiated rate.
+AR11103,2026-08-28,4600,4500,64,45,70.3,0,42,,0,0,41,none,
+AR11157,2026-08-28,3600,4050,36,24,66.7,5,22,,0,0,68,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-29,5200,5100,48,39,81.2,-3,37,,0,0,44,none,
+AR11088,2026-08-29,6000,6200,92,41,44.6,6,36,,0,0,38,none,
+AR11103,2026-08-29,4400,4700,64,42,65.6,5,42,,0,0,47,none,
+AR11157,2026-08-29,3600,3900,36,19,52.8,3,14,,0,0,60,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-30,5600,5500,48,40,83.3,5,39,,0,0,34,none,
+AR11088,2026-08-30,6000,6200,92,59,64.1,2,58,,0,0,46,none,
+AR11103,2026-08-30,4300,5100,64,55,85.9,21,41,,0,0,47,TechCon Hyderabad 29-31 Aug (HICC),Compression across Gachibowli micro-market. No group block. Transient pickup accelerating.
+AR11157,2026-08-30,3400,3900,36,24,66.7,7,24,,0,0,64,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-08-31,5600,5350,48,37,77.1,3,37,,0,0,48,none,
+AR11088,2026-08-31,6000,6200,92,60,65.2,4,60,,0,0,44,none,
+AR11103,2026-08-31,4200,4700,64,41,64.1,4,39,,0,0,39,none,
+AR11157,2026-08-31,3200,4050,36,20,55.6,7,20,,0,0,65,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-09-01,5200,5350,48,41,85.4,4,40,,0,0,57,none,
+AR11088,2026-09-01,6000,6050,92,59,64.1,2,59,,0,0,50,none,
+AR11103,2026-09-01,4400,4300,64,41,64.1,1,36,,0,0,57,none,
+AR11157,2026-09-01,3600,4050,36,24,66.7,4,24,,0,0,65,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-09-02,5400,5350,48,36,75.0,6,35,,0,0,43,none,
+AR11088,2026-09-02,6400,6200,92,70,76.1,1,70,,0,0,35,none,
+AR11103,2026-09-02,4600,4700,64,47,73.4,-1,46,,0,0,47,none,
+AR11157,2026-09-02,3400,3700,36,18,50.0,5,14,,0,0,60,none,BAR consistently below comp set - owner has raised this
+AR11042,2026-09-03,5200,5100,48,39,81.2,5,38,,0,0,40,none,
+AR11088,2026-09-03,6400,6050,92,57,62.0,7,56,,0,0,38,none,
+AR11103,2026-09-03,4400,4500,64,45,70.3,1,40,,0,0,44,none,
+AR11157,2026-09-03,3400,3900,36,19,52.8,7,15,,0,0,67,none,BAR consistently below comp set - owner has raised this
